@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #0F0E14;
+}
+
+.container {
+  padding: 20px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 450px;
+}
+
+.container h3 {
+  margin-bottom: 15px;
+  color: #5a5863;
+  text-align: center;
+}
+
+.container .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .top input {
+  cursor: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  height: 50px;
+  border: none;
+  padding: 10px 20px;
+  padding-right: 0;
+  background-color: #24232B;
+  font-family: inherit;
+  outline: 0;
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.container .top input::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: #494750;
+}
+
+.container .top input:-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: #494750;
+}
+
+.container .top input::-ms-input-placeholder {
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: #494750;
+}
+
+.container .top input::placeholder {
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: #494750;
+}
+
+.container .top .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.container .top .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #24232B;
+  color: #fafafa;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 55%;
+  margin-left: -75px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.container .top .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.container .top .tooltip button {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: #24232B;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.container .top .tooltip button i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  color: #a7dcb4;
+}
+
+.container .top .tooltip button:hover i {
+  color: #fafafa;
+}
+
+.container .bottom {
+  background-color: #24232B;
+  margin-top: 17px;
+  padding: 20px;
+}
+
+.container .bottom .characterContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.container .bottom .characterContainer p {
+  color: white;
+  font-size: 15px;
+}
+
+.container .bottom .characterContainer p.characterCount {
+  color: #a7dcb4;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.container .bottom .slider {
+  -webkit-appearance: none;
+  background: #18171f;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a7dcb4), to(#A4FFAF));
+  background-image: linear-gradient(#a7dcb4, #A4FFAF);
+  width: 100%;
+  height: 7px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  margin-bottom: 15px;
+}
+
+.container .bottom .slider:hover {
+  opacity: 1;
+}
+
+.container .bottom .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  border: 1px solid #e5e5e9;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.container .bottom .checkboxList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.container .bottom .checkboxList span {
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 2px solid #a7dcb4;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container .bottom .checkboxList label {
+  color: #fafafa;
+}
+
+.container .bottom .checkboxList label.red {
+  margin-right: 1rem;
+  padding-left: 1.75rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container .bottom .checkboxList label.red input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.container .bottom .checkboxList label.red input[type="checkbox"]:focus:checked ~ span {
+  border: 2px solid #70c685;
+}
+
+.container .bottom .checkboxList label.red input[type="checkbox"]:checked ~ span {
+  color: #fafafa;
+  background: #a7dcb4 url("../images/check.png") 50% 40% no-repeat;
+  border: 2px solid #a7dcb4;
+}
+
+.container .bottom .strengthContainer {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #18171f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .bottom .strengthContainer p {
+  color: #5a5863;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container .bottom .strengthContainer p.dynamicStrength {
+  display: none;
+  margin-left: auto;
+  margin-right: 10px;
+  color: #fafafa;
+  font-weight: normal;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar {
+  width: 10px;
+  height: 25px;
+  background-color: transparent;
+  border: 2px solid #fafafa;
+  margin-left: 3px;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar.red {
+  background-color: #DF6661;
+  border-color: #DF6661;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar.yellow {
+  background-color: #EFC20F;
+  border-color: #EFC20F;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar.lightGreen {
+  background-color: #00A878;
+  border-color: #00A878;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar.green {
+  background-color: #006B4D;
+  border-color: #006B4D;
+}
+
+.container .bottom .strengthContainer .strengthBarContainer .bar:nth-child(1) {
+  margin-left: 0;
+}
+
+.container .bottom .generatePasswordButton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #18171f;
+  font-family: inherit;
+  background-color: #A4FFAF;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-weight: 600;
+  padding: 15px 0;
+  border: 2px solid transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.container .bottom .generatePasswordButton i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.container .bottom .generatePasswordButton:hover {
+  background-color: transparent;
+  color: #A4FFAF;
+  border-color: #A4FFAF;
+}
+/*# sourceMappingURL=styles.css.map */

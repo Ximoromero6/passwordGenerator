@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/lock.png">
+    <title>Password Generator</title>
+    <meta name="title" content="Generate secure, free and totally random passwords with XPass">
+    <meta name="description" content="With XPass you can create passwords of different lengths and difficulties quickly and easily.">
+    <meta name="keywords" content="password, secure, generate, random">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Password Generator</h3>
+        <div class="top">
+            <input type="text" readonly placeholder="P4$5W0rD!" id="passwordInput">
+            <div class="tooltip">
+                <button id="copyPasswordButton" title="Copy password" aria-label="Copy password">
+                    <i class="fi fi-rr-copy-alt"></i>
+                    <span class="tooltiptext" id="copiedTooltip">Copied to clipboard!</span>
+                </button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="characterContainer">
+                <p>Character Length</p>
+                <p class="characterCount">0</p>
+            </div>
+            <input type="range" min="3" max="50" value="12" class="slider" id="myRange">
+            <div class="checkboxList">
+                <label class="checkbox red">
+                    <input type="checkbox" checked class="checkboxUppercase checkChar">
+                    <span class="indicator"></span>
+                    Include Uppercase Letters
+                </label>
+                <label class="checkbox red">
+                    <input type="checkbox" checked class="checkboxLowercase checkChar">
+                    <span class="indicator"></span>
+                    Include Lowercase Letters
+                </label>
+                <label class="checkbox red">
+                    <input type="checkbox" checked class="checkboxNumbers checkChar">
+                    <span class="indicator"></span>
+                    Include Numbers
+                </label>
+                <label class="checkbox red">
+                    <input type="checkbox" checked class="checkboxSymbols checkChar">
+                    <span class="indicator"></span>
+                    Include Symbols
+                </label>
+            </div>
+            <div class="strengthContainer">
+                <p>strength</p>
+                <p class="dynamicStrength"></p>
+                <div class="strengthBarContainer">
+                    <div class="bar red"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <button class="generatePasswordButton">
+                <p>generate</p>
+                <i class="fi fi-rr-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

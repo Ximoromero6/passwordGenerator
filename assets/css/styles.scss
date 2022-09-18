@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-
 * {
     padding: 0;
     margin: 0;
@@ -12,7 +11,6 @@ body {
 }
 
 $green: #a7dcb4;
-
 @mixin checkbox($color) {
     margin-right: 1rem;
     padding-left: 1.75rem;
@@ -22,21 +20,17 @@ $green: #a7dcb4;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
-
         &:focus:checked~span {
             border: 2px solid darken($color, 15%);
         }
-
         &:checked~span {
             color: #fafafa;
             background: $color url("../images/check.png") 50% 40% no-repeat;
             border: 2px solid $color;
         }
-
     }
 }
 
@@ -47,19 +41,17 @@ $green: #a7dcb4;
     flex-direction: column;
     justify-content: center;
     max-width: 450px;
-
+    overflow: hidden;
     h3 {
         margin-bottom: 15px;
         color: #5a5863;
         text-align: center;
     }
-
     .top {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         input {
             cursor: auto;
             flex: 1;
@@ -74,18 +66,15 @@ $green: #a7dcb4;
             outline: 0;
             font-size: 20px;
             color: #fafafa;
-
             &::placeholder {
                 letter-spacing: 1px;
                 font-weight: 900;
                 color: #494750;
             }
         }
-
         .tooltip {
             position: relative;
             display: inline-block;
-
             .tooltiptext {
                 visibility: hidden;
                 width: 140px;
@@ -101,7 +90,6 @@ $green: #a7dcb4;
                 margin-left: -75px;
                 opacity: 0;
                 transition: opacity 0.3s;
-
                 &::after {
                     content: "";
                     position: absolute;
@@ -113,7 +101,6 @@ $green: #a7dcb4;
                     border-color: #555 transparent transparent transparent;
                 }
             }
-
             button {
                 width: 50px;
                 height: 50px;
@@ -125,7 +112,6 @@ $green: #a7dcb4;
                 font-family: inherit;
                 background-color: #24232B;
                 transition: all .2s;
-
                 i {
                     display: flex;
                     justify-content: center;
@@ -133,7 +119,6 @@ $green: #a7dcb4;
                     font-size: 18px;
                     color: #a7dcb4;
                 }
-
                 &:hover {
                     i {
                         color: #fafafa;
@@ -141,25 +126,20 @@ $green: #a7dcb4;
                 }
             }
         }
-
     }
-
     .bottom {
         background-color: #24232B;
         margin-top: 17px;
         padding: 20px;
-
         .characterContainer {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
-
             p {
                 color: white;
                 font-size: 15px;
-
                 &.characterCount {
                     color: #a7dcb4;
                     font-size: 22px;
@@ -167,7 +147,6 @@ $green: #a7dcb4;
                 }
             }
         }
-
         .slider {
             -webkit-appearance: none;
             background: rgba(24, 23, 31, 1);
@@ -181,11 +160,9 @@ $green: #a7dcb4;
             -webkit-transition: .2s;
             transition: opacity .2s;
             margin-bottom: 15px;
-
             &:hover {
                 opacity: 1;
             }
-
             &::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
@@ -197,13 +174,11 @@ $green: #a7dcb4;
                 border-radius: 100%;
             }
         }
-
         .checkboxList {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
-
             span {
                 border-radius: 2px;
                 position: absolute;
@@ -219,16 +194,13 @@ $green: #a7dcb4;
                 -ms-user-select: none;
                 user-select: none;
             }
-
             label {
                 color: #fafafa;
-
                 &.red {
                     @include checkbox($green);
                 }
             }
         }
-
         .strengthContainer {
             margin: 20px 0;
             padding: 15px;
@@ -236,13 +208,11 @@ $green: #a7dcb4;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             p {
                 color: #5a5863;
                 text-align: center;
                 text-transform: uppercase;
                 font-weight: 600;
-
                 &.dynamicStrength {
                     display: none;
                     margin-left: auto;
@@ -251,46 +221,38 @@ $green: #a7dcb4;
                     font-weight: normal;
                 }
             }
-
             .strengthBarContainer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 .bar {
                     width: 10px;
                     height: 25px;
                     background-color: transparent;
                     border: 2px solid #fafafa;
                     margin-left: 3px;
-
                     &.red {
                         background-color: #DF6661;
                         border-color: #DF6661;
                     }
-
                     &.yellow {
                         background-color: #EFC20F;
                         border-color: #EFC20F;
                     }
-
                     &.lightGreen {
                         background-color: #00A878;
                         border-color: #00A878;
                     }
-
                     &.green {
                         background-color: #006B4D;
                         border-color: #006B4D;
                     }
-
                     &:nth-child(1) {
                         margin-left: 0;
                     }
                 }
             }
         }
-
         .generatePasswordButton {
             width: 100%;
             display: flex;
@@ -306,7 +268,6 @@ $green: #a7dcb4;
             border: 2px solid transparent;
             transition: all .2s;
             cursor: pointer;
-
             i {
                 display: flex;
                 justify-content: center;
@@ -314,7 +275,6 @@ $green: #a7dcb4;
                 font-weight: 600;
                 margin-left: 10px;
             }
-
             &:hover {
                 background-color: transparent;
                 color: #A4FFAF;
